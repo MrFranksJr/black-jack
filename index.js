@@ -27,21 +27,22 @@ function startGame() {
     //make sum
     let sum = valueArray.reduce((partialSum, a) => partialSum + a, 0);
     //add cards to screen
-    cardBlock.innerHTML = "<img class=\"cardimage\" src=\"images/cards/" + cardsOnTable[0] + "\"/>" + "<img class=\"cardimage\" src=\"images/cards/" + cardsOnTable[1] + "\"/>"
+    renderCards()
     //push messages to screen
     message = cashOut(sum)
-    cardsEl.textContent = "Cards: " + valueArray[0] + " and " + valueArray[1]
+    renderCardValues()
+    /* cardsEl.textContent = "Cards: " + valueArray[0] + " and " + valueArray[1] */
     sumEl.textContent = "Sum: " + sum
 }
 
 //when drawing a new card
 function newCard() {
     cardsOnTable.push(cardsArray.splice(0, 1))
-    cardBlock.innerHTML = cardBlock.innerHTML + "<img class=\"cardimage another-card\" src=\"images/cards/" + cardsOnTable.at(-1) + "\"/>"
+    renderCards()
     valueArray.push(checkCardValue(cardsOnTable.at(-1)))
     let sum = valueArray.reduce((partialSum, a) => partialSum + a, 0);   
     message = cashOut(sum)
-    cardsEl.textContent += " and " + valueArray.at(-1)
+    renderCardValues()
     sumEl.textContent = "Sum: " + sum
 }
 
@@ -112,6 +113,23 @@ function cashOut(sum) {
         messageEl.classList.add("busted")
     }
     messageEl.innerHTML = message
+}
+
+//renders cardfaces
+function renderCards() {
+    cardBlock.innerHTML = ""
+    for (let i = 0; i < cardsOnTable.length; i++){
+        cardBlock.innerHTML += "<img class=\"cardimage\" src=\"images/cards/" + cardsOnTable[i] + "\"/>"
+    }
+}
+
+function renderCardValues() {
+    let string = "Card values: "
+    for (let i = 0; i < valueArray.length; i++) {
+        string += valueArray[i] + ", "
+    }
+    string = string.replace(/,\s*$/, "")
+    cardsEl.textContent = string
 }
 
 //resetting the game.. simple reload
