@@ -30,8 +30,8 @@ function startGame() {
     cardBlock.innerHTML = "<img class=\"cardimage\" src=\"images/cards/" + cardsOnTable[0] + "\"/>" + "<img class=\"cardimage\" src=\"images/cards/" + cardsOnTable[1] + "\"/>"
     //push messages to screen
     message = cashOut(sum)
-    cardsEl.innerText = "Cards: " + valueArray[0] + " and " + valueArray[1]
-    sumEl.innerText = "Sum: " + sum
+    cardsEl.textContent = "Cards: " + valueArray[0] + " and " + valueArray[1]
+    sumEl.textContent = "Sum: " + sum
 }
 
 //when drawing a new card
@@ -41,8 +41,8 @@ function newCard() {
     valueArray.push(checkCardValue(cardsOnTable.at(-1)))
     let sum = valueArray.reduce((partialSum, a) => partialSum + a, 0);   
     message = cashOut(sum)
-    cardsEl.innerText = cardsEl.innerText + " and " + valueArray.at(-1)
-    sumEl.innerText = "Sum: " + sum
+    cardsEl.textContent += " and " + valueArray.at(-1)
+    sumEl.textContent = "Sum: " + sum
 }
 
 //shuffle the deck
