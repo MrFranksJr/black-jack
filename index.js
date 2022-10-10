@@ -65,6 +65,7 @@ const cardsArray = [
 ]
 let cardIndex = 0
 
+//when pressing start
 function startGame() {
     //reset things
     cardBlock.classList.remove("busted")
@@ -86,17 +87,7 @@ function startGame() {
 
     cardBlock.innerHTML = "<img class=\"cardimage\" src=\"images/cards/" + firstCard + "\"/>" + "<img class=\"cardimage\" src=\"images/cards/" + secondCard + "\"/>"
 
-    if (sum <= 20) {
-        message = "Smaller than 21"
-    }
-    else if (sum === 21) {
-        hasBlackJack = true
-        message = "Blackjack!!"
-    }
-    else {
-        isAlive = false
-        message = "BUSTED, BITCH!"
-    }
+    message = cashOut(sum)
 
     // CASH OUT!
     messageEl.innerText = message
@@ -107,29 +98,14 @@ function startGame() {
     totals = sum
 }
 
+//when drawing a new card
 function newCard() {
     let newCard = cardsArray[cardIndex]
     cardBlock.innerHTML = cardBlock.innerHTML + "<img class=\"cardimage another-card\" src=\"images/cards/" + newCard + "\"/>"
     let newCardValue = checkCardValue(newCard)
     let sum = calcFunction(totals, newCardValue)
     
-    if (sum <= 20) {
-        message = "Still smaller than 21... How about another card?"
-    }
-    else if (sum === 21) {
-        hasBlackJack = true
-        message = "Blackjack!!"
-        cardBlock.classList.add("blackjack")
-        messageEl.classList.add("blackjack")
-    }
-    else {
-        isAlive = false
-        message = "BUSTED, BITCH!"
-        newGameButton.disabled = false
-        newCardButton.disabled = true
-        cardBlock.classList.add("busted")
-        messageEl.classList.add("busted")
-    }
+    message = cashOut(sum)
 
     // CASH OUT!
     messageEl.innerText = message
@@ -195,6 +171,29 @@ function calcFunction(firstCard, secondCard) {
             return sum
         }
     }
+}
+
+//calculate message to be shown
+function cashOut(sum) {
+    if (sum <= 20) {
+        message = "Still smaller than 21... How about another card?"
+    }
+    else if (sum === 21) {
+        hasBlackJack = true
+        message = "Blackjack!!"
+        cardBlock.classList.add("blackjack")
+        messageEl.classList.add("blackjack")
+    }
+    else {
+        isAlive = false
+        message = "BUSTED!!"
+        newGameButton.disabled = false
+        newCardButton.disabled = true
+        cardBlock.classList.add("busted")
+        messageEl.classList.add("busted")
+    }
+
+    return message
 }
 
 //resetting the game.. simple reload
