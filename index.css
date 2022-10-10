@@ -76,11 +76,11 @@ button:disabled {
     margin: 5px;
 }
 
-#resetbtn {
+.resetbtn {
     margin-top: 30px;
     background-color: #ffffff70;
 }
-#resetbtn:hover {
+.resetbtn:hover {
     background-color: #FFF;
 }
 
@@ -91,4 +91,11 @@ button:disabled {
 .blackjack {
     color: gold;
     border: solid gold 5px;
+}
+
+.resetBlackJack {
+    background-color: #FFF;
+}
+.resetBlackJack:hover {
+    background-color: #DDD;
 }
