@@ -26,6 +26,7 @@ function startGame() {
     }
     //make sum
     let sum = valueArray.reduce((partialSum, a) => partialSum + a, 0);
+    console.log(valueArray)
     //add cards to screen
     cardBlock.innerHTML = "<img class=\"cardimage\" src=\"images/cards/" + cardsOnTable[0] + "\"/>" + "<img class=\"cardimage\" src=\"images/cards/" + cardsOnTable[1] + "\"/>"
     //push messages to screen
@@ -39,7 +40,8 @@ function newCard() {
     cardsOnTable.push(cardsArray.splice(0, 1))
     cardBlock.innerHTML = cardBlock.innerHTML + "<img class=\"cardimage another-card\" src=\"images/cards/" + cardsOnTable.at(-1) + "\"/>"
     valueArray.push(checkCardValue(cardsOnTable.at(-1)))
-    let sum = valueArray.reduce((partialSum, a) => partialSum + a, 0);    
+    let sum = valueArray.reduce((partialSum, a) => partialSum + a, 0);   
+    console.log(valueArray) 
     message = cashOut(sum)
     cardsEl.innerText = cardsEl.innerText + " and " + valueArray.at(-1)
     sumEl.innerText = "Sum: " + sum
@@ -64,7 +66,8 @@ function shuffle(array) {
 function checkCardValue(card) {
     let cardName = card.toString()
     let value
-    if (valueArray.length >= 3) {
+    console.log(valueArray.length)
+    if (valueArray.length >= 2) {
         if (cardName.startsWith("king") || cardName.startsWith("queen") || cardName.startsWith("jack")) {
             value = Number("10")
         }
