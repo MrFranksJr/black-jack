@@ -1,0 +1,93 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("images/table.png");
+    background-position: center;
+    background-size: cover;
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+}
+
+#wrapper {
+    max-width: 748px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#content {
+    display: flex;
+    justify-content: space-around;
+}
+
+#text-block {
+    width: 300px;
+}
+
+#message-el {
+    font-style: italic;
+    padding: 2px 0px;
+}
+
+button {
+    display: block;
+    position: relative;
+    font-weight: bold;
+    color: #016f32;
+    width: 150px;
+    height: 30px;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+button:enabled:active {
+    top: 1px;
+    background-color: beige;
+}
+
+button:hover {
+    background-color: gold;
+}
+
+button:disabled {
+    background-color: #FFFFFF70;
+}
+
+.cardblock {
+    margin: 20px auto;
+    min-width: 110px;
+    max-width: fit-content;
+    height: 160px;
+    border: solid #00000051 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardimage {
+    width: 100px;
+    height: 145px;
+    margin: 5px;
+}
+
+#resetbtn {
+    margin-top: 30px;
+    background-color: #ffffff70;
+}
+#resetbtn:hover {
+    background-color: #FFF;
+}
+
+.busted {
+    border: solid red 5px;
+}
+
+.blackjack {
+    color: gold;
+    border: solid gold 5px;
+}
