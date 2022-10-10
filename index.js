@@ -10,12 +10,11 @@ let newGameButton = document.getElementById("newgamebutton")
 let newCardButton = document.getElementById("cardbutton")
 newCardButton.disabled = true
 const cardsArray = [
-    "2-clubs.png",
-    "queen-clubs.png",
     "queen-spades.png",
+    "king-spades.png",
     "queen-hearts.png",
     "queen-diamonds.png",
-    "king-spades.png",
+    "queen-clubs.png",
     "king-hearts.png",
     "king-diamonds.png",
     "king-clubs.png",
@@ -27,6 +26,10 @@ const cardsArray = [
     "ace-hearts.png",
     "ace-diamonds.png",
     "ace-clubs.png",
+    "10-spades.png",
+    "10-hearts.png",
+    "10-diamonds.png",
+    "10-clubs.png",
     "9-spades.png",
     "9-hearts.png",
     "9-diamonds.png",
@@ -59,10 +62,6 @@ const cardsArray = [
     "2-hearts.png",
     "2-diamonds.png",
     "2-clubs.png",
-    "10-spades.png",
-    "10-hearts.png",
-    "10-diamonds.png",
-    "10-clubs.png",
 ]
 let cardIndex = 0
 
@@ -131,6 +130,7 @@ function newCard() {
         cardBlock.classList.add("busted")
         messageEl.classList.add("busted")
     }
+
     // CASH OUT!
     messageEl.innerText = message
     cardsEl.innerText = cardsEl.innerText + " and " + newCardValue
@@ -139,6 +139,7 @@ function newCard() {
     cardIndex += 1
 }
 
+//shuffle the deck
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
   
@@ -157,14 +158,20 @@ function shuffle(array) {
     return array;
 }
 
-
+//retrieve the value of the card, based off the face/filename
 function checkCardValue(card) {
     let value
     if (card.startsWith("king") || card.startsWith("queen") || card.startsWith("jack")) {
         value = Number("10")
     }
     else if (card.startsWith("ace")) {
-        value = Number("11")
+        //check if this is the second round, if so, ace is only 1
+        if (cardIndex < 2) {
+            value = Number("11")
+        }
+        else {
+            value = Number("1")
+        }  
     }
     else {
         value = value = Number(card.split('-')[0])
@@ -172,7 +179,7 @@ function checkCardValue(card) {
     return value
 }
 
-
+//calculate the sum of the cards
 function calcFunction(firstCard, secondCard) {
     if (cardIndex < 2) {
         let sum = firstCard + secondCard

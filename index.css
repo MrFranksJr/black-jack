@@ -29,6 +29,7 @@ h1 {
 #message-el {
     font-style: italic;
     padding: 2px 0px;
+    height: 40px;
 }
 
 button {
