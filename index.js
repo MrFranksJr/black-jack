@@ -1,5 +1,3 @@
-let hasBlackJack = false
-let isAlive = true
 let message
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
@@ -64,30 +62,28 @@ function shuffle(array) {
 //retrieve the value of the card, based off the face/filename
 function checkCardValue(card) {
     let cardName = card.toString()
-    let value
     if (valueArray.length >= 2) {
         if (cardName.startsWith("king") || cardName.startsWith("queen") || cardName.startsWith("jack")) {
-            value = Number("10")
+            return 10
         }
         else if (cardName.startsWith("ace")) {
-            value = Number("1")
+            return 1
         }
         else {
-            value = Number(cardName.split('-')[0])
+            return Number(cardName.split('-')[0])
         }
     }
     else {
         if (cardName.startsWith("king") || cardName.startsWith("queen") || cardName.startsWith("jack")) {
-            value = Number("10")
+            return 10
         }
         else if (cardName.startsWith("ace")) {
-            value = Number("11")
+            return 11
         }
         else {
-            value = Number(cardName.split('-')[0])
+            return Number(cardName.split('-')[0])
         }
     }
-return value
 }
 
 //calculate message to be shown
@@ -96,7 +92,6 @@ function cashOut(sum) {
         message = "Still smaller than 21... <br /> How about another card...?"
     }
     else if (sum === 21) {
-        hasBlackJack = true
         message = "Blackjack!! <br /> Congratulations!"
         newGameButton.disabled = false
         newCardButton.disabled = true
@@ -105,7 +100,6 @@ function cashOut(sum) {
         resetButton.classList.add("resetBlackJack")
     }
     else {
-        isAlive = false
         message = "BUSTED!! <br /> Play another round!"
         newGameButton.disabled = false
         newCardButton.disabled = true
