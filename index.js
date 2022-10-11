@@ -36,6 +36,8 @@ function startGame() {
     renderCardValues()
     /* cardsEl.textContent = "Cards: " + valueArray[0] + " and " + valueArray[1] */
     sumEl.textContent = "Sum: " + sum
+    player.chips = player.chips - 100
+    playerEl.textContent = player.name + " - $" + player.chips
 }
 
 //when drawing a new card
@@ -97,12 +99,14 @@ function cashOut(sum) {
         message = "Still smaller than 21... <br /> How about another card...?"
     }
     else if (sum === 21) {
-        message = "Blackjack!! <br /> Congratulations!"
+        message = "Blackjack!! <br /> Congratulations! You won $400!!"
         newGameButton.disabled = false
         newCardButton.disabled = true
         cardBlock.classList.add("blackjack")
         messageEl.classList.add("blackjack")
         resetButton.classList.add("resetBlackJack")
+        player.chips += 400
+        playerEl.textContent = player.name + " - $" + player.chips
     }
     else {
         message = "BUSTED!! <br /> Play another round!"
