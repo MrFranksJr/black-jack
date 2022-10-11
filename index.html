@@ -30,7 +30,7 @@
             <p>Ready to play some Blackjack?? <br/> Allrighty, fill out your data, get ready and win some money!!</p>
             <form name="playerData" class="player-data" title="Player Data" action="document.playerData.submit();">
                 <label for="name">Full name: </label><br><input id="fullname" type="text" placeholder="Enter name" required/><br>
-                <label for="chips">How much money do you have?</label><br><input id="bet" type="number" placeholder="Feeling lucky? 🤑"/><br>
+                <label for="chips">How much money do you have?</label><br><input id="bet" type="number" pattern="\d*" placeholder="Feeling lucky? 🤑"/><br>
             </form>
             <button class="submit-btn" onclick="submitForm()">Submit</button>
             <p class="rules">No worries... nothing's being saved...</p>
