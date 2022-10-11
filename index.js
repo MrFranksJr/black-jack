@@ -1,4 +1,8 @@
 let message
+let player = {
+    name: "",
+    chips: 0
+}
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
@@ -6,6 +10,7 @@ let cardBlock = document.getElementById("cardblock")
 let newGameButton = document.getElementById("newgamebutton")
 let newCardButton = document.getElementById("cardbutton")
 let resetButton = document.getElementById("resetbtn")
+let playerEl = document.getElementById("player-el")
 let cardsArray = []
 let valueArray = []
 let cardsOnTable = []
@@ -124,6 +129,22 @@ function renderCardValues() {
     }
     string = string.replace(/,\s*$/, "")
     cardsEl.textContent = string
+}
+
+/* function openPopup() {
+    let blur = document.getElementById("blur")
+    blur.classList.toggle('active')
+} */
+
+function submitForm() {
+    let blur = document.getElementById("blur")
+    let modal = document.getElementById("player-info")
+    player.name = document.getElementById("fullname").value
+    player.chips = document.getElementById('bet').value
+    blur.classList.remove('active')
+    modal.classList.add('nothing')
+
+    playerEl.textContent = player.name + " - $" + player.chips
 }
 
 //resetting the game.. simple reload

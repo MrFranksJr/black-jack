@@ -8,7 +8,11 @@ body {
     font-weight: bold;
 }
 
-#wrapper {
+#blur.active {
+    filter: blur(10px);
+}
+
+.wrapper {
     max-width: 748px;
     margin: 0 auto;
 }
@@ -98,4 +102,65 @@ button:disabled {
 }
 .resetBlackJack:hover {
     background-color: #DDD;
+}
+
+.rules {
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 40px;
+    padding: 0px 10px;
+}
+
+a {
+    color: goldenrod;
+}
+
+#player-el {
+    color: goldenrod;
+    margin: 30px 0px;
+}
+
+#sexy {
+    position: fixed;
+    width: 150px;
+    bottom: 0;
+    right: 0;
+}
+
+#weird {
+    position: fixed;
+    width: 150px;
+    left: 0;
+    bottom: 0;
+}
+
+#player-info {
+    background-color: #ffffff90;
+    border-radius: 10px;
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    top: 50px;
+    left:50%;
+    margin-left: -150px;
+}
+
+#player-info h2 {
+    color: goldenrod;
+}
+
+#player-info p {
+    margin: 10px 0px 40px 0px;
+}
+
+form label {
+    line-height: 30px;
+}
+
+form input {
+    margin-top: 0px;
+}
+
+.nothing {
+    display: none;
 }

@@ -2,14 +2,14 @@
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
-        <meta name="viewport" content="width=device-width, initial-scale=0.80, maximum-scale=0.80">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="keywords" content="HTML, CSS, JavaScript, blackjack, scrimba">
         <meta name="author" content="Franky Blondeel">
         <title>Blackjack! - the Dealer always wins!</title>
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
     </head>
     <body>
-        <div id="wrapper">
+        <div class="wrapper, active" id="blur">
             <h1>BLACKJACK</h1>
             <div id="content">
                 <div id="text-block">
@@ -19,10 +19,24 @@
                 </div>
             </div>
             <div id="cardblock" class="cardblock"><h2>Cards</h2></div>
+            <p id="player-el"></p>
             <button onclick="startGame()" id="newgamebutton">START GAME</button>
             <button onclick="newCard()" id="cardbutton" disabled>New Card...</button>
             <button id="resetbtn" onclick="resetGame()" class="resetbtn">Reset Game</button>
+            <p class="rules">Confused? Read about the Blackjack rules <a href="https://bicyclecards.com/how-to-play/blackjack/" alt="link to the rules of blackjack" target="_blank">here</a>!<br/>TL:DR -> Draw new cards, and try to get as close as possible to or even hit 21 in total card value, without going over... Good luck!<br/><br/> FYI: When drawing an ace, the game awards you 11 points on the initial hand, but 1 point on any card drawn.<br/>A two-player module is on the way.</p>
         </div>
+        <div id="player-info">
+            <h2>🃏 What's up Player? 🃏</h2>
+            <p>Ready to play some Blackjack?? <br/> Allrighty, fill out your data, get ready and win some money!!</p>
+            <form name="playerData" class="player-data" title="Player Data" action="document.playerData.submit();">
+                <label for="name">Full name: </label><br><input id="fullname" type="text" placeholder="Enter name" required/><br>
+                <label for="chips">Place a big bet!!</label><br><input id="bet" type="text" placeholder="Feeling lucky? 🤑"/><br>
+            </form>
+            <button class="submit-btn" onclick="submitForm()">Submit</button>
+            <p class="rules">No worries... nothing's being saved...</p>
+        </div>
+        <!-- <img id="sexy" src="images/hotblackjack.png"/>
+        <div id="weird"><img src="images/weird.png"/></div> -->
         <script src="index.js"></script>
         
     </body>
