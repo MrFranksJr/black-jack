@@ -1,13 +1,42 @@
-# co4484d5484d14d129ca7f431
+# Blackjack - The Dealer always wins
 
-## About Scrimba
+## Overview
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+Live version [here](https://frbl-blackjack.netlify.app/)
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+I'm currently refreshing my entire JavaScript knowledge through a course on [Scrimba](https://scrimba.com/allcourses)
+The assignment was to make a simple number generator, that at the press of a button, generates you a couple of numbers representing cards.
 
-Happy Coding!
+I wanted to take it a tiny bit further, wanted to make it a bit nicer to look at, I'll explain below how I worked.
+
+## Rules of the Game
+I'm not going to go too deep into the rules of Blackjack.
+How my game works in particular though, is as follows:
+* You enter your data when starting a game. You can choose however much money you hve
+* You press START GAME in order to kick off
+    * Starting a game will draw two random cards
+    * Starting a game costs you $100
+* You can draw a new card by clicking the New Card... button
+* You can completely reset the game by pressing the button below
+* When bust, you have the option to start a new game
+* When you get Blackjack, you win $400
+
+## Some technicalities
+Making a random number generator is not the hardest thing in the world. So that's why I wanted something extra in the game.
+### Make it visual
+So what I did is that I really wanted to see the cards on the screen. I got some card faces from the [Google Code Archive](https://code.google.com/archive/p/vector-playing-cards/downloads).
+Once the cards were downloaded, I got rid of the cards I didn't need, and all named them in a specific way, e.g.:
+* king-hearts.png
+* 9-spades.png
+* ...
+In the Javascript, I could then determine the value of the cards, just based of the naming, and count scoring like that.
+
+Now, at this point the randomization factor really became fdgfds 
+
+
+## ToDo's
+Obviously, the game is far from finished, but it served as a really nice training for me to get back into JavaScript.
+Some things I want to add still:
+* Currently nothing happens when you have $0. So I want to implement a fail-state in the future.
+* You don't get to see the dealer's hand... And that takes away the entire point of the game. You can't really win in this game, unless you exactly hit a Blackjack. And that needs to change.
+* One other option I thought of is that you can press an 'end-game' button and that they would get to see the next card in the stack, to see if they would've gone bust.
