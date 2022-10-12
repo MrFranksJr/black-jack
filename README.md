@@ -1,4 +1,4 @@
-*12 oct 2022 - Franky Jr Blondeel*
+*Oct 12, 2022 - Franky Jr Blondeel*
 
 
 # Blackjack - The Dealer always wins
