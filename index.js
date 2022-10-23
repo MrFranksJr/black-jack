@@ -3,14 +3,14 @@ let player = {
     name: "",
     chips: 0
 }
-let messageEl = document.getElementById("message-el")
-let sumEl = document.getElementById("sum-el")
-let cardsEl = document.getElementById("cards-el")
-let cardBlock = document.getElementById("cardblock")
-let newGameButton = document.getElementById("newgamebutton")
-let newCardButton = document.getElementById("cardbutton")
-let resetButton = document.getElementById("resetbtn")
-let playerEl = document.getElementById("player-el")
+const messageEl = document.getElementById("message-el")
+const sumEl = document.getElementById("sum-el")
+const cardsEl = document.getElementById("cards-el")
+const cardBlock = document.getElementById("cardblock")
+const newGameButton = document.getElementById("newgamebutton")
+const newCardButton = document.getElementById("cardbutton")
+const resetButton = document.getElementById("resetbtn")
+const playerEl = document.getElementById("player-el")
 let cardsArray = []
 let valueArray = []
 let cardsOnTable = []
