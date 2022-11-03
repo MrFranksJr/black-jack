@@ -5,7 +5,7 @@
 
 ## Overview
 
-Live version [here](https://frbl-blackjack.netlify.app/)
+**Live version [here](https://frbl-blackjack.netlify.app/)**
 
 I'm currently refreshing my entire JavaScript knowledge through a course on [Scrimba](https://scrimba.com/allcourses)
 The assignment was to make a simple number generator, that at the press of a button, generates you a couple of numbers representing cards.
@@ -15,7 +15,10 @@ I wanted to take it a tiny bit further, wanted to make it a bit nicer to look at
 ## Rules of the Game
 I'm not going to go too deep into the rules of Blackjack.
 How my game works in particular though, is as follows:
-* You enter your data when starting a game. You can choose however much money you hve
+* You enter your data when starting a game. You can choose however much money you have
+<p align="center">
+<img alt="screenshot of the infoscreen" src="https://github.com/MrFranksJr/MrFranksJr/blob/main/assets/black-jack/infoscreen.png">
+</p>
 * You press START GAME in order to kick off
     * Starting a game will draw two random cards
     * Starting a game costs you $100
@@ -33,6 +36,12 @@ Once the cards were downloaded, I got rid of the cards I didn't need, and all na
 * 9-spades.png
 * ...
 In the Javascript, I could then determine the value of the cards, just based of the naming, and count scoring like that.
+<p align="center">
+<img alt="screenshot of the start of the game" src="https://github.com/MrFranksJr/MrFranksJr/blob/main/assets/black-jack/gamestart.png">
+</p>
+<p align="center">
+<img alt="screenshot of the win screen" src="https://github.com/MrFranksJr/MrFranksJr/blob/main/assets/black-jack/blackjack.png">
+</p>
 
 ### Make it Random
 Now, at this point the randomization factor really became an interesting thing to tackle. I'm sure there's different ways of doing it, but I solved it like this:
