@@ -39,9 +39,6 @@ In the Javascript, I could then determine the value of the cards, just based of 
 <p align="center">
 <img alt="screenshot of the start of the game" src="https://github.com/MrFranksJr/MrFranksJr/blob/main/assets/black-jack/gamestart.png">
 </p>
-<p align="center">
-<img alt="screenshot of the win screen" src="https://github.com/MrFranksJr/MrFranksJr/blob/main/assets/black-jack/blackjack.png">
-</p>
 
 ### Make it Random
 Now, at this point the randomization factor really became an interesting thing to tackle. I'm sure there's different ways of doing it, but I solved it like this:
@@ -57,6 +54,9 @@ Now, at this point the randomization factor really became an interesting thing t
 So yeah, the rest is just some details, calculations, etc...
 Still some things missing, I might add that in the future. Right now my objective is not to make the perfect app, but to understand and familiarize myself with certain concepts, fast.
 Adding a fail state will not necessarily teach me much, rather cost me time. But still, I want to track all my todo's, just like I did with the basketball counter.
+<p align="center">
+<img alt="screenshot of the win screen" src="https://github.com/MrFranksJr/MrFranksJr/blob/main/assets/black-jack/blackjack.png">
+</p>
 
 ## ToDo's
 Obviously, the game is far from finished, but it served as a really nice training for me to get back into JavaScript.
