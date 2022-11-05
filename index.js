@@ -1,3 +1,5 @@
+import { cardsArray} from '/cards.js'
+
 let message
 let player = {
     name: "",
@@ -11,9 +13,14 @@ const newGameButton = document.getElementById("newgamebutton")
 const newCardButton = document.getElementById("cardbutton")
 const resetButton = document.getElementById("resetbtn")
 const playerEl = document.getElementById("player-el")
-let cardsArray = []
+const submitBtn = document.getElementById("submit-btn")
 let valueArray = []
 let cardsOnTable = []
+
+submitBtn.addEventListener('click', submitForm)
+newGameButton.addEventListener('click', startGame)
+newCardButton.addEventListener('click', newCard)
+resetButton.addEventListener('click', resetGame)
 
 //when pressing start
 function startGame() {
@@ -168,58 +175,4 @@ function resetWhenStart() {
     //build cardsArray
     valueArray = []
     cardsOnTable = []
-    cardsArray = [
-    "queen-spades.png",
-    "king-spades.png",
-    "queen-hearts.png",
-    "queen-diamonds.png",
-    "queen-clubs.png",
-    "king-hearts.png",
-    "king-diamonds.png",
-    "king-clubs.png",
-    "jack-spades.png",
-    "jack-hearts.png",
-    "jack-diamonds.png",
-    "jack-clubs.png",
-    "ace-spades.png",
-    "ace-hearts.png",
-    "ace-diamonds.png",
-    "ace-clubs.png",
-    "10-spades.png",
-    "10-hearts.png",
-    "10-diamonds.png",
-    "10-clubs.png",
-    "9-spades.png",
-    "9-hearts.png",
-    "9-diamonds.png",
-    "9-clubs.png",
-    "8-spades.png",
-    "8-hearts.png",
-    "8-diamonds.png",
-    "8-clubs.png",
-    "7-spades.png",
-    "7-hearts.png",
-    "7-diamonds.png",
-    "7-clubs.png",
-    "6-spades.png",
-    "6-hearts.png",
-    "6-diamonds.png",
-    "6-clubs.png",
-    "5-spades.png",
-    "5-hearts.png",
-    "5-diamonds.png",
-    "5-clubs.png",
-    "4-spades.png",
-    "4-hearts.png",
-    "4-diamonds.png",
-    "4-clubs.png",
-    "3-spades.png",
-    "3-hearts.png",
-    "3-diamonds.png",
-    "3-clubs.png",
-    "2-spades.png",
-    "2-hearts.png",
-    "2-diamonds.png",
-    "2-clubs.png",
-    ]
  }

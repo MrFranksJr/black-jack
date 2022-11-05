@@ -22,9 +22,9 @@
             </div>
             <div id="cardblock" class="cardblock"><h2>Cards</h2></div>
             <p id="player-el"></p>
-            <button onclick="startGame()" id="newgamebutton">START GAME</button>
-            <button onclick="newCard()" id="cardbutton" disabled>New Card...</button>
-            <button id="resetbtn" onclick="resetGame()" class="resetbtn">Reset Game</button>
+            <button id="newgamebutton">START GAME</button>
+            <button id="cardbutton" disabled>New Card...</button>
+            <button id="resetbtn" class="resetbtn">Reset Game</button>
             <p class="rules">Confused? Read about the Blackjack rules <a href="https://bicyclecards.com/how-to-play/blackjack/" alt="link to the rules of blackjack" target="_blank">here</a>!<br/>TL:DR -> Draw new cards, and try to get as close as possible to or even hit 21 in total card value, without going over...<br/><br/> FYI: When drawing an ace, the game awards you 11 points on the initial hand, but 1 point on any extra card drawn.<br>Every time you start a new game, you pay $100.<br>When you get Blackjack, you win $400.<br>GOOD LUCK!!<br></p>
         </div>
         <div id="player-info">
@@ -34,10 +34,10 @@
                 <label for="name">Full name: </label><br><input id="fullname" type="text" placeholder="Enter name" required/><br>
                 <label for="chips">How much money do you have?</label><br><input id="bet" type="number" pattern="\d*" placeholder="Feeling lucky? 🤑"/><br>
             </form>
-            <button class="submit-btn" onclick="submitForm()">Submit</button>
+            <button class="submit-btn" id="submit-btn">Submit</button>
             <p class="rules">No worries... nothing's being saved...</p>
         </div>
-        <script src="index.js"></script>
+        <script src="index.js" type="module"></script>
         
     </body>
 </html>
