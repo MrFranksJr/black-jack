@@ -1,5 +1,5 @@
 import { cardsArray} from '/cards.js'
-const RandomOrg = require('random-org');
+import RandomOrg from 'random-org'
 
 var random = new RandomOrg({ apiKey: '768b9559-2a20-4ad3-bc7e-4252491547cf' });
 random.generateIntegers({ min: 0, max: 52, n: 1 })
