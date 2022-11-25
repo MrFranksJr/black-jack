@@ -4,3 +4,5 @@ images/.DS_Store
 vite.config.js
 package.json
 package-lock.json
+black-jack.code-workspace
+node_modules
