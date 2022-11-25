@@ -1,5 +1,15 @@
 import { cardsArray} from '/cards.js'
 
+import RandomOrg from 'random-org';
+
+var random = new RandomOrg({ apiKey: '768b9559-2a20-4ad3-bc7e-4252491547cf' });
+random.generateIntegers({ min: 0, max: 52, n: 1 })
+  .then(function(result) {
+    console.log(result.random.data); // [55, 3]
+  });
+
+
+
 let message
 let player = {
     name: "",

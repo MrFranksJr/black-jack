@@ -1,3 +1,7 @@
 
 images/.DS_Store
 .vscode
+vite.config.js
+package.json
+package-lock.json
+node_modules/
