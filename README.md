@@ -15,10 +15,11 @@ I wanted to take it a tiny bit further, wanted to make it a bit nicer to look at
 ## Rules of the Game
 I'm not going to go too deep into the rules of Blackjack.
 How my game works in particular though, is as follows:
-* You enter your data when starting a game. You can choose however much money you have
+* You enter your data when starting a game. You can choose however much money you have 
 <p align="center">
 <img alt="screenshot of the infoscreen" src="https://github.com/MrFranksJr/MrFranksJr/blob/main/assets/black-jack/infoscreen.png">
 </p>
+
 * You press START GAME in order to kick off
     * Starting a game will draw two random cards
     * Starting a game costs you $100
