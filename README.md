@@ -7,7 +7,8 @@
 
 **Live version [here](https://frbl-blackjack.netlify.app/)**
 
-I'm currently refreshing my entire JavaScript knowledge through a course on [Scrimba](https://scrimba.com/allcourses)
+I'm currently refreshing my entire JavaScript knowledge through a course on [Scrimba](https://scrimba.com/allcourses).
+
 The assignment was to make a simple number generator, that at the press of a button, generates you a couple of numbers representing cards.
 
 I wanted to take it a tiny bit further, wanted to make it a bit nicer to look at, I'll explain below how I worked.
